@@ -12,7 +12,7 @@
 (defun my-c-mode-common-hook()
   (setq tab-width 4 indent-tabs-mode nil)
   ;; hungry-delete and auto-newline
-  (c-toggle-auto-hungry-state 1)
+;  (c-toggle-auto-hungry-state 1)
   ;; 按键定义
   (define-key c-mode-base-map [(control \`)] 'hs-toggle-hiding)
   (define-key c-mode-base-map [(return)] 'newline-and-indent)
