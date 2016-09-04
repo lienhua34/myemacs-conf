@@ -17,6 +17,15 @@
 ;;    go get -u github.com/dougm/goflymake
 (add-to-list 'load-path (concat golang-config-dir "/goflymake"))
 (require 'go-flymake)
+(add-hook 'flymake-mode-hook
+	  (lambda()
+	    (local-set-key (kbd "C-c C-e n") 'flymake-goto-next-error)))
+(add-hook 'flymake-mode-hook
+	  (lambda()
+	    (local-set-key (kbd "C-c C-e p") 'flymake-goto-prev-error)))
+(add-hook 'flymake-mode-hook
+	  (lambda()
+	    (local-set-key (kbd "C-c C-e m") 'flymake-popup-current-error-menu)))
 
 
 ;;(require 'go-flycheck)
