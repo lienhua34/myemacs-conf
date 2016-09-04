@@ -205,7 +205,7 @@
 (add-to-list 'ac-modes 'go-mode)
 
 (add-hook 'go-mode-hook #'(lambda ()
-                           (add-to-list 'ac-sources 'ac-source-go)))
-
+;;                           (add-to-list 'ac-sources 'ac-source-go)))
+			    (setq ac-sources '(ac-source-go ac-source-abbrev ac-source-dictionary))))
 (provide 'go-autocomplete)
 ;;; go-autocomplete.el ends here

@@ -105,3 +105,8 @@ gocode set unimported-packages true
 
 ## emacs配置 ##
 安装完gocode之后，可以在emacs中配置[auto-complete](https://github.com/auto-complete/auto-complete)或者[company-mode](https://company-mode.github.io)来实现代码联想功能。经过我自己的验证，虽然company-mode比auto-complete轻量，但是确实没有auto-complete效果好。
+
+默认配置下，在go语言的自动联想列表中，本文件中定义的标识符会重复出现，造成该问题的原因是go-mode模式的buffer中的ac-sources包含了ac-source-go和ac-source-words-in-same-mode-buffer，也就是说auto-complete自动联想列表中显示的内容来自go语言工具分析的结果和同是go-mode的缓冲区中的单词（当然包括自身文件了）。通过go-autocomplete.el文件修改ac-sources，
+```
+(setq ac-sources '(ac-source-go ac-source-abbrev ac-source-dictionary))
+```

@@ -45,7 +45,5 @@
   (exec-path-from-shell-initialize))
 
 ;; load auto-complete
-;; auto-complete使用说明请参考http://auto-complete.org/doc/manual.html
-(add-to-list 'load-path (concat common-config-dir "/auto-complete"))
-(require 'auto-complete-config)
-(ac-config-default)
+(load-file (concat common-config-dir "/auto-complete/.entry.el"))
+
