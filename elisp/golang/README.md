@@ -55,7 +55,13 @@ go-mode提供了标准的一些代码浏览操作快捷键，例如：
 
 
 # goflymake #
-goflymake是针对go语言代码执行on-the-fly语法检查的minor-mode。其执行检查的三个时间点是，
+[goflymake](https://github.com/dougm/goflymake)是针对go语言代码执行on-the-fly语法检查的minor-mode。
+使用前先参考goflymake的github说明安装一下goflymake，安装命令如下：
+```
+go get -u github.com/dougm/goflymake
+```
+
+其执行检查的三个时间点是，
 - 缓冲区加载后；
 - 换行时；
 - 超过0.5s之前修改的内容。
