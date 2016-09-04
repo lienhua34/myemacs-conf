@@ -86,3 +86,27 @@ goflymake提供的方法有：
 	  (lambda()
 	    (local-set-key (kbd "C-c C-e m") 'flymake-popup-current-error-menu)))
 ```
+
+# gocode #
+
+## 安装与配置 ##
+
+gocode结合company-go可以用于实现go语言的代码联想功能。需要先看考github上的[gocode](https://github.com/nsf/gocode)说明安装gocode，
+```
+go get -u github.com/nsf/gocode
+```
+安装完gocode后，再安装一下[company](company-mode.github.io)和company-go，然后参考[emacs-company/README](https://github.com/nsf/gocode/tree/master/emacs-company)配置。
+
+另外，需要使用下面命令设置一下gocode的参数
+```
+gocode set propose-builtins true
+gocode set autobuild true
+gocode set unimported-packages true
+```
+
+## 使用说明 ##
+激活company-mode模式之后，当你输入几个字符或者.之后，emacs会自动给出联想结果列表（也可以通过手工运行company-complete来初始化联想）。
+
+在联想列表中，通过M-n或M-p快捷键来上下选择，然后<return>来选择或者<tab>来自动补全公共部分，或者通过M-(digit)来快速使用联想列表中前10项中某一项。
+
+当选择联想列表中某一项之后，可以通过<F1>键查看该选中项的文档说明或者C-w快捷键来查看该项的源代码。
