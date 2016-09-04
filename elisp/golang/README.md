@@ -110,3 +110,12 @@ gocode set unimported-packages true
 ```
 (setq ac-sources '(ac-source-go ac-source-abbrev ac-source-dictionary))
 ```
+
+# go-errcheck #
+[errcheck](https://github.com/kisielk/errcheck)是一个用于查找并报告go语言代码中未被处理问题列表的工具。[go-errcheck](https://github.com/dominikh/go-errcheck.el)是emacs中用于集合errcheck工具的插件，可以将errcheck找到的问题列在complication缓冲区中，并且能够跳转到具体代码行。
+
+go-errcheck提供了go-errcheck方法用户触发errcheck检查。默认没有绑定到快捷键。本配置中将其绑定到C-c C-e c。
+```
+(add-hook 'go-mode-hook (lambda ()
+			  (local-set-key (kbd "C-c C-e c") 'go-errcheck)))
+```
