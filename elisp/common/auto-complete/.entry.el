@@ -10,6 +10,21 @@
 ;; define key M-TAB to manually active completion
 (define-key ac-mode-map (kbd "M-TAB") 'auto-complete)
 
+;; 设置C-p和C-n为联想项的上下选择键
+(setq ac-use-menu-map t)
+(define-key ac-menu-map "\C-n" 'ac-next)
+(define-key ac-menu-map "\C-p" 'ac-previous)
+
+;; 设置联想menu的高度
+(setq ac-menu-height 20)
+
+;; 忽略大小写（默认是smart，表示如果输入的字符串中没有大写字母才会忽略大小写）
+(setq ac-ignore-case t)
+
+;; 设置颜色
+(set-face-background 'ac-candidate-face "steelblue")
+(set-face-background 'ac-selection-face "darkblue")
+
 ;; load fuzzy, enable ac-fuzzy-complete
 ;; (require 'fuzzy)
 
