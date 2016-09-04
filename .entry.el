@@ -8,6 +8,9 @@
 ;; load golang develop environment configure entry file
 (load-file (concat root-config-dir "/elisp/golang/.entry.el"))
 
+;; load markdown edit environment configure entry file
+(load-file (concat root-config-dir "/elisp/markdown/.entry.el"))
+
 ;; load c/cpp develop environment configure entry file
 ;(load-file (concat root-config-dir "/elisp/cpp/.entry.el"))
 
