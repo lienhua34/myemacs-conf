@@ -43,3 +43,9 @@
 (require 'exec-path-from-shell)
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
+
+;; load auto-complete
+;; auto-complete使用说明请参考http://auto-complete.org/doc/manual.html
+(add-to-list 'load-path (concat common-config-dir "/auto-complete"))
+(require 'auto-complete-config)
+(ac-config-default)
