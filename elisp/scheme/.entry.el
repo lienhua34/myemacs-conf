@@ -2,7 +2,9 @@
 ;; This file is configures for Scheme Program 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'load-path "~/emacs/elisp/scheme")
+(setq scheme-config-dir (concat root-config-dir "/elisp/scheme"))
+
+(add-to-list 'load-path scheme-config-dir)
 
 ;;; Also highlight parens
 (setq show-paren-delay 0

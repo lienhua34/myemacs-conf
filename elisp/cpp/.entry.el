@@ -2,6 +2,8 @@
 ;; This file is configures for c/c++ program
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(setq cpp-config-dir (concat root-config-dir "/elisp/cpp"))
+
 ;; cc-mode configure
 (require 'cc-mode)
 (c-set-offset 'inline-open 0)
@@ -32,7 +34,7 @@
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
 
 ;; configure for CEDET
-(load-file "~/emacs/elisp/cpp/cedet-1.1/common/cedet.el")
+(load-file (concat cpp-config-dir "/cedet-1.1/common/cedet.el"))
 (setq semanticdb-project-roots
       (list (expand-file-name "/")))
 (defun my-indent-or-complete ()
