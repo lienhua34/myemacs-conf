@@ -16,7 +16,7 @@
 
 默认情况下，我会将我的配置文件clone到~/.emacs.d目录下，
 ```
-git clone https://github.com/lienhua/myemacs-conf ~/.emacs.d
+git clone https://github.com/lienhua34/myemacs-conf ~/.emacs.d
 ```
 然后在~/.emacs文件中加入加载根目录的.entry.el即可，
 ```
