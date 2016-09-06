@@ -16,3 +16,5 @@
 
 ;; load scheme develop environment configure entry file
 ;;(load-file (concat root-config-dir "/elisp/scheme/.entry.el"))
+
+(load-file (concat root-config-dir "/elisp/yaml/.entry.el"))
