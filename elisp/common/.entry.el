@@ -10,7 +10,7 @@
 (add-to-list 'load-path (concat common-config-dir "/color-theme"))
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-ramangalahy)
+(color-theme-arjen)
 
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;; custom set variable
@@ -46,4 +46,14 @@
 
 ;; load auto-complete
 (load-file (concat common-config-dir "/auto-complete/.entry.el"))
+
+;; chinese input method
+;; refer to https://github.com/tumashu/chinese-pyim
+;; M-x package-install RET chinese-pyim RET
+;;
+;;(require 'chinese-pyim)
+;;(require 'chinese-pyim-basedict)
+;;(chinese-pyim-basedict-enable)
+;;(setq default-input-method "chinese-pyim")
+;;(global-set-key (kbd "C-\\") 'toggle-input-method)
 
