@@ -1,5 +1,14 @@
 
 
+;; package 
+(require 'package)
+(setq package-archives
+      '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+        ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+        ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+(setq package-unsigned-archives (mapcar #'car package-archives))
+(package-initialize)
+
 ;; config-dir变量记录的是这个库clone到本地的路径，默认是“~/.emacs.”。
 ;; 如果不是这个目录，则需要进行修改，因为后续加载各种环境配置入口文件均需要该变量
 (setq root-config-dir "~/.emacs.d")
