@@ -30,7 +30,9 @@
 
 (load-file (concat root-config-dir "/elisp/yaml/.entry.el"))
 
-(load-file (concat root-config-dir "/elisp/scala/.entry.el"))
+;; (load-file (concat root-config-dir "/elisp/scala/.entry.el"))
+
+(load-file (concat root-config-dir "/elisp/protobuf/.entry.el"))
 
 ;; 使用空格缩进
 (setq-default indent-tabs-mode nil)
