@@ -5,7 +5,8 @@
 (setq package-archives
       '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
         ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-        ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+        ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+        ("melpa-stable" . "https://stable.melpa.org/packages/")))
 (setq package-unsigned-archives (mapcar #'car package-archives))
 (package-initialize)
 
@@ -33,6 +34,8 @@
 ;; (load-file (concat root-config-dir "/elisp/scala/.entry.el"))
 
 (load-file (concat root-config-dir "/elisp/protobuf/.entry.el"))
+
+(load-file (concat root-config-dir "/elisp/groovy/.entry.el"))
 
 ;; 使用空格缩进
 (setq-default indent-tabs-mode nil)
