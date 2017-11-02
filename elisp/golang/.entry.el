@@ -76,3 +76,26 @@
 			  (local-set-key (kbd "C-c C-e c") 'go-errcheck)))
 
 
+;;;;;; flycheck ;;;;;;
+;; https://github.com/favadi/flycheck-gometalinter
+;; Install gometalinter and install all available checkers with:
+;;    `gometalinter --install --update`
+(require 'flycheck-gometalinter)
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-gometalinter-setup))
+(add-hook 'after-init-hook #'global-flycheck-mode)
+;; skips 'vendor' directories and sets GO15VENDOREXPERIMENT=1
+(setq flycheck-gometalinter-vendor t)
+;; only show errors
+;; (setq flycheck-gometalinter-errors-only t)
+;; only run fast linters
+(setq flycheck-gometalinter-fast t)
+;; use in tests files
+(setq flycheck-gometalinter-test t)
+;; disable linters
+(setq flycheck-gometalinter-disable-linters '("gotype" "gocyclo"))
+;; Only enable selected linters
+;; (setq flycheck-gometalinter-disable-all t)
+;; (setq flycheck-gometalinter-enable-linters '("golint"))
+;; Set different deadline (default: 5s)
+(setq flycheck-gometalinter-deadline "10s")
